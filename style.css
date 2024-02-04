@@ -387,7 +387,7 @@ color:#10221b
     box-sizing: border-box;
     margin-top: 2rem;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/images/footer.jpg) no-repeat;
+    url(/assets/footer.jpg) no-repeat;
     background-size:cover;
     background-position: center;
     background-attachment: fixed;
