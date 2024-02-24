@@ -36,10 +36,10 @@ const email=document.getElementById('email');
 const phone=document.getElementById('phone');
 const subject=document.getElementById('subject');
 const message=document.getElementById('message');
-const Fullname=document.getElementById('name');
+const Fulname=document.getElementById('name');
 
 function sendEmail(){
-    const bodyMessage=`Full Name:${Fullname.value}<br>Email:${email.value}<br> 
+    const bodyMessage=`Full Name:${Fulname.value}<br>Email:${email.value}<br> 
     Phone Number:${phone.value}<br>Subject:${subject.value}<br>Message:${message.value}`;
 
     Email.send({
