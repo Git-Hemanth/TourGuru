@@ -44,10 +44,10 @@ function sendEmail(){
 
     Email.send({
         Host : "smtp.elasticemail.com",
-        Username : "hemanthforlearning@gmail.com",
-        Password : "7DD6AA2880F7AA422BEEB938BA8C5F809D67",
-        To : 'hemanthforlearning@gmail.com',
-        From : "hemanthforlearning@gmail.com",
+        Username : "hemanthhere12@gmail.com",
+        Password : "8A1DC0686382CCCADF818005DB9B69B18189",
+        To : 'hemanthhere12@gmail.com',
+        From : "hemanthhere12@gmail.com",
         Subject : subject.value,
         Body : bodyMessage
     }).then(
