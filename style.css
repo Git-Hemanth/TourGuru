@@ -354,7 +354,7 @@ color:#10221b
   i {
     color: green;
   }
-  form {
+/*  form {
     width: 90vw;
     margin: 1rem 1rem;
     border-bottom: 0.2rem solid white;
@@ -382,7 +382,7 @@ color:#10221b
   }
   form label:hover {
     color: green;
-  }  
+  }  */
   .footer {
     box-sizing: border-box;
     margin-top: 2rem;
