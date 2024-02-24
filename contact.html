@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+    
+</head>
+<body>
+    <section class="contact">
+        <h2>Contact Me</h2>
+           <form action="#">
+         <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" class="item" placeholder="Full name" id="name" required autocomplete="off">
+                    <div class="error-text">Full name can not be blank</div>
+                </div>
+                <div class="input-field field">
+                    <input type="email" class="item" placeholder="Email Address" id="email" required autocomplete="off">
+                    <div class="error-text">Mail can not be blank</div>
+                </div>
+          </div>
+                <div class="input-box">
+                    <div class="input-field field">
+                        <input type="number" class="item" placeholder="Phone number" id="phone" required autocomplete="off">
+                        <div class="error-text">Phone number can not be blank</div>
+                    </div>
+                    <div class="input-field field">
+                        <input type="text" class="item" placeholder="subject" id="subject" required autocomplete="off">
+                        <div class="error-text">Subject can not be blank</div>
+                    </div>
+                </div>
+            
+            <div class="textarea-field field">
+                <textarea name="" id="message" cols="30" rows="10" class="item" placeholder="Your Message" style=resize:none; required autocomplete="off"></textarea>
+                <div class="error-text">Message can not be blank</div>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        
+    </section>
+</body>
+</html>
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(43, 74, 88);
+    height: 100vh;
+}
+
+.contact h2{
+    font-size: 40px;
+    color:rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contact form{
+    width: 600px;
+   
+    text-align: center;
+
+}
+
+form .input-box{
+    display: flex;
+    justify-content: space-between;
+}
+.field .item{
+    width:100%;
+    padding:18px;
+    background:transparent;
+    border:2px solid rgb(255, 255, 255);
+    outline:none;
+    border-radius: 6px;
+    font-size:16px;
+    color:aliceblue;
+    margin:12px 0;
+}
+.input-box .input-field{
+    width:48.5%;
+}
+form button{
+    padding:12px 32px;
+    background-color: #ed9f32;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    color: rgb(236, 236, 234);
+    border-radius: 6px;
+    box-shadow: 0 0 7px #ed9f32;
+    cursor: pointer;
+    letter-spacing:1px;
+}
+
+form button:hover{
+    box-shadow: none;
+}
+
+.field .error-text{
+   display: none;
+   color: red;
+   font-weight:200;
+   text-align: left;
+   margin-left: 4px;
+   margin-top: -3px;
+} </style>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+<script>
+    const form=document.querySelector('form');
+    const email=document.getElementById('email');
+    const phone=document.getElementById('phone');
+    const subject=document.getElementById('subject');
+    const message=document.getElementById('message');
+    const Fullname=document.getElementById('name');
+    
+    function sendEmail(){
+        const bodyMessage=`Full Name:${Fullname.value}<br>Email:${email.value}<br> 
+        Phone Number:${phone.value}<br>Subject:${subject.value}<br>Message:${message.value}`;
+    
+        Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "hemanthsigning@gmail.com",
+            Password : "A30539F086A64C416AEA61790557C545E5FD",
+            To : 'hemanthsigning@gmail.com',
+            From : "hemanthsigning@gmail.com",
+            Subject : subject.value,
+            Body : bodyMessage
+        }).then(
+            message=>
+            {
+             if(message=="OK"){
+                Swal.fire({
+                    title: "Done!",
+                    text: "Message sent successfully!",
+                    icon: "success"
+                  });
+                }
+             })
+    }
+    form.addEventListener("submit",(e) => {
+        e.preventDefault();
+    
+        sendEmail();
+    });
+    
+</script>    
