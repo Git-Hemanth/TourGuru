@@ -111,7 +111,19 @@ form button:hover{
    text-align: left;
    margin-left: 4px;
    margin-top: -3px;
-} </style>
+} 
+@media (max-width: 768px) {
+    form{
+  flex-direction:column;
+            html {
+      font-size: 50%;
+    }
+    }
+@media (max-width:450px){
+form {
+      width: 50vw;
+}
+</style>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
 <script>
