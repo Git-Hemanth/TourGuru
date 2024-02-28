@@ -3,7 +3,8 @@ This is a Tour agency website designed using Tailwand CSS , Html and Vanilla Jav
 
 # Home 
 
-<img width="958" alt="image" src="https://github.com/Git-Hemanth/TourGuru/assets/147172782/3373eb7a-9dd5-4bfe-be28-e9185109b995">
+<img width="960" alt="image" src="https://github.com/Git-Hemanth/TourGuru/assets/147172782/a79d34f1-d258-4e66-bd08-d590327a405a">
+
 
 # Contact Form
 Contact Form is powered with Smtp(Simple mail transfer protocol) Javascript Library Mailing System for the Server-side management
